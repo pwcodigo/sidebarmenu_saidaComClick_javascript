@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <title>Menu Bar</title>
+</head>
+<body>
+    <header>
+        <div class="tophead">
+            <div>
+                <span class="menulines" onclick="openNav()">&#9776;</span>
+            </div>
+            <div class="brandlogo">
+                PWcodigo
+            </div>
+           
+        </div>
+    </header>
+
+    <div class="modal" id="modal" onclick="fecharGeral()">
+        <div class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                &times;
+            </a>
+            <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Inicio</a>
+            <a href="#"><i class="fa fa-university" aria-hidden="true"></i>Política</a>
+            <a href="#"><i class="fa fa-taxi" aria-hidden="true"></i>Policial</a>
+            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Cultura</a>
+            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Emprego</a>
+            <a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i>Cinema</a>
+        
+        </div>
+    </div>
+
+    <section class="mainpart">
+        <h2>Principais noticias do dia</h2>
+        <p> Segue a notica do dia</p>
+
+    </section>
+
+    <script type="text/javascript">
+
+        const fecharGeral = () => {
+            let eventoOne = event.target;
+            let eventoTwo = event.currentTarget;
+            if(eventoOne == eventoTwo){
+                document.getElementById("mySidenav").style.width = "0px";
+                document.getElementById("modal").style.background = "transparent";
+            }
+        }
+       
+       const openNav = () => {
+           document.getElementById("mySidenav").style.width = "250px";
+           document.getElementById("modal").style.background = "rgba(0,0,0,.5)";
+           
+        }
+
+        const closeNav = () => {
+            document.getElementById("mySidenav").style.width = "0px";
+            document.getElementById("modal").style.background = "transparent";
+        }
+    </script>
+</body>
+</html>
